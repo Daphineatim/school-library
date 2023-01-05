@@ -24,7 +24,7 @@ class App
 
   def list_persons
     puts "\nList of Persons: "
-    if @persons.length.zero?
+    if @persons.empty?
       puts 'There is no one in the list. Please add a person!'
     else
       @persons.each_with_index do |person, index|
@@ -92,12 +92,12 @@ class App
   def create_rental
     print "\nSelect a book from the following list by number: "
     list_books
-    ui_input if @books.length.zero?
+    ui_input if @books.empty?
     book_index = gets.chomp.to_i
 
     print 'Select a person from the following list by number (not id): '
     list_persons
-    ui_input if @persons.length.zero?
+    ui_input if @persons.empty?
     person_index = gets.chomp.to_i
 
     print 'Enter a date [format yyyy/mm/dd]: '
@@ -111,10 +111,10 @@ class App
   def list_rentals
     puts "\nID of the Person: "
     list_persons
-    ui_input if @persons.length.zero?
+    ui_input if @persons.empty?
     id = gets.chomp.to_i
     puts 'List of Rentals: '
-    if @rentals.length.zero?
+    if @rentals.empty?
       puts 'There is no rental in the list. Please add a rental!'
     else
       @rentals.each do |rental|
