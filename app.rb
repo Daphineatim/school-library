@@ -12,7 +12,7 @@ class App
 
   def list_books
     puts "\nList of Books: "
-    if @books.length.zero?
+    if @books.empty?
       puts 'There is no book in the list. Please add a book!'
     else
       @books.each_with_index do |book, index|
