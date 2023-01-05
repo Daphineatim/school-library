@@ -111,7 +111,7 @@ class App
   def list_rentals
     puts "\nID of the Person: "
     list_persons
-    ui_input if @persons.empty?
+    return if @persons.empty?
     id = gets.chomp.to_i
     puts 'List of Rentals: '
     if @rentals.empty?
