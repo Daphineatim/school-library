@@ -112,7 +112,7 @@ class App
     puts "\nID of the Person: "
     list_persons
     return if @persons.empty?
- 
+
     id = gets.chomp.to_i
     puts 'List of Rentals: '
     if @rentals.empty?
